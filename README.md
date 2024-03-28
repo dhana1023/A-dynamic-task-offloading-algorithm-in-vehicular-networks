@@ -49,14 +49,14 @@ cd your_project
 ## To execute 
 `python3 simulate.py`
 
-It will generate the data in the form of json files
+It will generate the data in the form of json files.
 
--RSU.json
--vfs.json
--user_vehicle.json
--distances_rsu.json
--distances_vfs.json
-vehicles.json
+- RSU.json
+- vfs.json
+- user_vehicle.json
+- distances_rsu.json
+- distances_vfs.json
+- vehicles.json
 
 
 This project is designed to simulate vehicle movement and generate various data files and plots based on the simulation. The simulation is executed through the simulate.py script.

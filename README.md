@@ -30,7 +30,7 @@ The project implemented a dynamic task offloading algorithm for vehicular ad hoc
 ## Requirements
  - Python 3.10.12
  - Required Python packages (simpy, matplotlib)
- - 
+   
 ## Installation
 1. Clone the repository to your local machine:
 
@@ -41,7 +41,7 @@ git clone https://github.com/dhana1023/Cloud-Project.git
 2. Navigate to the project directory:
 ```sh
 cd your_project
-``
+```
 3. Install the required python packages:
    - simpy
    - matplotlib

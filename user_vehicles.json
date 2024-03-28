@@ -1,0 +1,24 @@
+[
+    {
+        "x": 3.182248463025248,
+        "y": 0.8870538815178902,
+        "label": "Vehicle11",
+        "speed": 42.51427331715616,
+        "processing_capacity": 8,
+        "direction": "left",
+        "cpu_clock_frequency": 1.5266237470245498,
+        "task_size": 17645949.44275764,
+        "result_size": 3529189.888551528
+    },
+    {
+        "x": 2.3532491184951763,
+        "y": 2.5482448437169,
+        "label": "Vehicle8",
+        "speed": 25.62264929822,
+        "processing_capacity": 1,
+        "direction": "right",
+        "cpu_clock_frequency": 1.4612439018364165,
+        "task_size": 5498451.522140677,
+        "result_size": 1099690.3044281355
+    }
+]

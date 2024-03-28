@@ -1,0 +1,32 @@
+[
+    {
+        "distance": 20.292521907045508,
+        "uv_label": "Vehicle11",
+        "rsu_label": "RSU1"
+    },
+    {
+        "distance": 47.4237741176954,
+        "uv_label": "Vehicle11",
+        "rsu_label": "RSU2"
+    },
+    {
+        "distance": 26.853182714577624,
+        "uv_label": "Vehicle11",
+        "rsu_label": "RSU3"
+    },
+    {
+        "distance": 19.05351823361367,
+        "uv_label": "Vehicle8",
+        "rsu_label": "RSU1"
+    },
+    {
+        "distance": 46.550798044611064,
+        "uv_label": "Vehicle8",
+        "rsu_label": "RSU2"
+    },
+    {
+        "distance": 25.76861691004249,
+        "uv_label": "Vehicle8",
+        "rsu_label": "RSU3"
+    }
+]

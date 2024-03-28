@@ -35,7 +35,7 @@ The project implemented a dynamic task offloading algorithm for vehicular ad hoc
 1. Clone the repository to your local machine:
 
 ```sh
-git clone https://github.com/dhana1023/Cloud Project.git
+git clone https://github.com/dhana1023/Cloud-Project.git
 ```
 
 2. Navigate to the project directory:

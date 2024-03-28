@@ -51,11 +51,11 @@ cd your_project
 
 It will generate the data in the form of json files
 
-RSU.json
-vfs.json
-user_vehicle.json
-distances_rsu.json
-distances_vfs.json
+-RSU.json
+-vfs.json
+-user_vehicle.json
+-distances_rsu.json
+-distances_vfs.json
 vehicles.json
 
 

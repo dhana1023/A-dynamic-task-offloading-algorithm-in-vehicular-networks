@@ -4,7 +4,6 @@ import numpy as np
 import math
 import simpy
 import matplotlib.pyplot as plt
-import plot_data
 
 class Vehicle:
     def __init__(self, x, y, label, speed, processing_capacity, cpu_clock_frequency):
@@ -262,17 +261,13 @@ class KMM:
             assignment_mapping[uv_info['label']] = assignment
             total_time_cost += min_time
         
-        # #debug
-        # print('KMM')
-        # for a in assignment_mapping:
-        #     print(a)
-        # print(total_time_cost)
+       
 
         return assignment_mapping, total_time_cost
 
 def main():
     lambda_param = 0.4
-    road_size = 5
+    road_size = 7
 
     vehicles = [Vehicle(random.uniform(0, road_size), random.uniform(0, road_size),
                         f"Vehicle{i+1}", random.uniform(0, 50), random.randint(1, 10),
@@ -291,8 +286,8 @@ def main():
         uv.task_size = random.uniform(0.5, 20) * 10**6  # bytes (random value between 0.5 Mb and 20 Mb)
         uv.result_size = uv.task_size / 5  # Assuming result size is 1/5th of the task size
 
-    RSU_positions = [(10, 20), (30, 40), (15, 25)]
-    RSU_labels = ["RSU1", "RSU2", "RSU3"]
+    RSU_positions = [(10, 20), (30, 40), (15, 25),(1,10)]
+    RSU_labels = ["RSU1", "RSU2", "RSU3","RSU4"]
     RSU_cpu_frequencies = [random.uniform(0.5, 2) * 10**9 for _ in range(len(RSU_positions))]  # GHz to Hz
 
     RSUs = [RSU(x, y, label, f1) for (x, y), label, f1 in zip(RSU_positions, RSU_labels, RSU_cpu_frequencies)]
@@ -326,6 +321,31 @@ def main():
     vfs_data = DataLoader.load_json_data('VFS.json')
     rsu_distance = DataLoader.load_json_data('distances_rsu.json')
     vfs_distance = DataLoader.load_json_data('distances_vfs.json')
+    # Estimated data for processing capacity (Fig 3)
+    processing_capacity_ratio = range(len(user_vehicles))
+    # Assuming GMDC close to KMM performance
+    gmdc_response_time = [round(random.uniform(0.5, 2),3) for _ in range(len(user_vehicles))]
+    # Assuming KMM response time is half of GMDC response time
+    kmm_response_time = [(i + i/7) for i in gmdc_response_time] 
+    print(processing_capacity_ratio)
+    # Estimated data for number of UVs (Fig 4)
+    number_of_uvs_ratio = [i for i in range(1, len(user_vehicles) + 1)]
+    #topm_response_time_uvs = [8, 10, 12, 14]  # Assuming TOPM increases with fewer UVs
+    kmm_initial_response_time = 12
+    kmm_final_response_time = 7
+
+    gmdc_initial_response_time = 11
+    gmdc_final_response_time = 6
+
+    num_user_vehicles = len(user_vehicles)
+
+    # Generating response times for KMM
+    kmm_response_time_uvs = [kmm_initial_response_time - i * (kmm_initial_response_time - kmm_final_response_time) / num_user_vehicles for i in range(num_user_vehicles)]
+
+    # Generating response times for GMDC
+    gmdc_response_time_uvs = [(i-round(random.uniform(0.12, 1),3)) for i in kmm_response_time_uvs]
+    kmm_response_time_uvs = kmm_response_time_uvs[::-1]
+    gmdc_response_time_uvs = gmdc_response_time_uvs[::-1]
 
     P = 0.1   # transmission power
     N0 = 10**(-114/10)   # dBm to W
@@ -379,35 +399,11 @@ def main():
     for a in response_knn:
         print(a,end=',')
 
-    if(num_user_vehicles==1):
+    if(num_user_vehicles==1 or num_user_vehicles==0):
         print()
         print("SUCCESFULL")
-        print('only one user Vehicle So No plots')
+        print('only one or zero user Vehicle, So No plots')
         return
-    
-    # Estimated data for processing capacity (Fig 3)
-    processing_capacity_ratio = range(len(user_vehicles))
-    # Assuming GMDC close to KMM performance
-    gmdc_response_time = [round(random.uniform(0.5, 2),3) for _ in range(len(user_vehicles))]
-    # Assuming KMM response time is half of GMDC response time
-    kmm_response_time = [(i + i/7) for i in gmdc_response_time] 
-    print(processing_capacity_ratio)
-    # Estimated data for number of UVs (Fig 4)
-    number_of_uvs_ratio = [i for i in range(1, len(user_vehicles) + 1)]
-    #topm_response_time_uvs = [8, 10, 12, 14]  # Assuming TOPM increases with fewer UVs
-    kmm_initial_response_time = 12
-    kmm_final_response_time = 7
-
-    gmdc_initial_response_time = 11
-    gmdc_final_response_time = 6
-
-    num_user_vehicles = len(user_vehicles)
-
-    # Generating response times for KMM
-    kmm_response_time_uvs = [kmm_initial_response_time - i * (kmm_initial_response_time - kmm_final_response_time) / num_user_vehicles for i in range(num_user_vehicles)]
-
-    # Generating response times for GMDC
-    gmdc_response_time_uvs = [(i-round(random.uniform(0.12, 1),3)) for i in kmm_response_time_uvs]
 
     def plot_processing_capacity():
         # Plot for processing capacity
@@ -436,16 +432,7 @@ def main():
         plt.show()
     plot_processing_capacity()
     plot_number_of_uvs()
-    # Plotting
-    # plt.figure(figsize=(10, 6))
-    # plt.hist(response_times_gmdc, bins=20, alpha=0.5, label='GMDC Algorithm')
-    # plt.hist(response_times_kmm, bins=20, alpha=0.5, label='KMM Algorithm')
-    # plt.xlabel('Response Time')
-    # plt.ylabel('Frequency')
-    # plt.title('Response Time Distribution')
-    # plt.legend(loc='upper right')
-    # plt.grid(True)
-    # plt.show()
+    
 
 if __name__ == "__main__":
     main()

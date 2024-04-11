@@ -1,12 +1,8 @@
 
-# A dynamic task offloading algorithm based on greedy matching in vehicle network
+# A dynamic task offloading algorithm based on greedy matching in-vehicle networks
 
-The project implemented a dynamic task offloading algorithm for vehicular ad hoc networks (VANETs) based on greedy matching principles. The algorithm can dynamically assign tasks to communication endpoints based on real-time network conditions, task characteristics, and resource availability. This approach aims to optimize task assignment, minimize response times, and enhance service quality for cloud-based applications in vehicular environments. Existing task offloading approaches may not fully address the unique challenges caused by VANETs, necessitating innovative solutions.
+The project implemented a dynamic task offloading algorithm for vehicular ad hoc networks (VANETs) based on greedy matching principles. The algorithm can dynamically assign tasks partially of each user vehicle to communication endpoints based on real-time network conditions, task characteristics, and resource availability. This approach aims to optimize task assignment, minimize response times, and enhance service quality for cloud-based applications in vehicular environments. Existing task offloading approaches may not fully address the unique challenges caused by VANETs, necessitating innovative solutions.
 
-## Team Members
-- Irigi Yuva Kumar  - 232CS013
-- Dhananjani Jayarukshi- 232CS014
-- Himanshu Thakkar - 232CS035
 
 ## Algorithms used
 1. KMM
@@ -14,8 +10,8 @@ The project implemented a dynamic task offloading algorithm for vehicular ad hoc
 
 ## Greedy Matching Algorithm
 
-- Uses a greedy matching approach to assign tasks to available VFSs or RSUs. 
-- It is for adapting the dynamics of traffic environment.
+- Uses a greedy matching approach to assign tasks to available VFSs or RSUs.
+- It is for adapting to the dynamics of the traffic environment.
 - In GMDC, the user vehicle appears randomly.
 - It initializes parameters like communication range, transmission power, noise power, available bandwidth, and path loss exponent range. 
 - Data preparation involves loading vehicle, VFS, and RSU data, and assigning tasks based on communication ranges and delay time. 

@@ -1,4 +1,5 @@
 
+
 # A dynamic task offloading algorithm based on greedy matching in-vehicle networks
 
 The project implemented a dynamic task offloading algorithm for vehicular ad hoc networks (VANETs) based on greedy matching principles. The algorithm can dynamically assign tasks partially of each user vehicle to communication endpoints based on real-time network conditions, task characteristics, and resource availability. This approach aims to optimize task assignment, minimize response times, and enhance service quality for cloud-based applications in vehicular environments. Existing task offloading approaches may not fully address the unique challenges caused by VANETs, necessitating innovative solutions.
@@ -53,6 +54,10 @@ It will generate the data in the form of json files.
 - distances_rsu.json
 - distances_vfs.json
 - vehicles.json
+
+<img width="800" height="600" alt="Figure_2" src="https://github.com/user-attachments/assets/35e5651e-d864-45f6-9c63-fa8bcc9f079e" />
+<img width="800" height="600" alt="Figure_1" src="https://github.com/user-attachments/assets/ea3be910-88cf-4e4d-9b28-e8af2651d5c4" />
+<img width="653" height="102" alt="{1D838A4B-6A63-49C2-8445-A012E2096252}" src="https://github.com/user-attachments/assets/ab4ad0d3-ec15-4be6-9cd1-aa646c4ecf92" />
 
 
 This project is designed to simulate vehicle movement and generate various data files and plots based on the simulation. The simulation is executed through the simulate.py script.

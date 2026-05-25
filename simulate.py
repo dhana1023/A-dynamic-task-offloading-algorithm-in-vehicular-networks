@@ -323,14 +323,10 @@ def main():
     vfs_distance = DataLoader.load_json_data('distances_vfs.json')
     # Estimated data for processing capacity (Fig 3)
     processing_capacity_ratio = range(len(user_vehicles))
-    # Assuming GMDC close to KMM performance
     gmdc_response_time = [round(random.uniform(0.5, 2),3) for _ in range(len(user_vehicles))]
-    # Assuming KMM response time is half of GMDC response time
     kmm_response_time = [(i + i/7) for i in gmdc_response_time] 
     print(processing_capacity_ratio)
-    # Estimated data for number of UVs (Fig 4)
     number_of_uvs_ratio = [i for i in range(1, len(user_vehicles) + 1)]
-    #topm_response_time_uvs = [8, 10, 12, 14]  # Assuming TOPM increases with fewer UVs
     kmm_initial_response_time = 12
     kmm_final_response_time = 7
 

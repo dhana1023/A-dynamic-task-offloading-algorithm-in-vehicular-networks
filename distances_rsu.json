@@ -1,32 +1,82 @@
 [
     {
-        "distance": 20.292521907045508,
-        "uv_label": "Vehicle11",
+        "distance": 20.07054271013055,
+        "uv_label": "Vehicle5",
         "rsu_label": "RSU1"
     },
     {
-        "distance": 47.4237741176954,
-        "uv_label": "Vehicle11",
+        "distance": 46.31820937991904,
+        "uv_label": "Vehicle5",
         "rsu_label": "RSU2"
     },
     {
-        "distance": 26.853182714577624,
-        "uv_label": "Vehicle11",
+        "distance": 26.238600258967438,
+        "uv_label": "Vehicle5",
         "rsu_label": "RSU3"
     },
     {
-        "distance": 19.05351823361367,
-        "uv_label": "Vehicle8",
+        "distance": 10.967742602966522,
+        "uv_label": "Vehicle5",
+        "rsu_label": "RSU4"
+    },
+    {
+        "distance": 19.407340645463385,
+        "uv_label": "Vehicle16",
         "rsu_label": "RSU1"
     },
     {
-        "distance": 46.550798044611064,
-        "uv_label": "Vehicle8",
+        "distance": 46.510702297646745,
+        "uv_label": "Vehicle16",
         "rsu_label": "RSU2"
     },
     {
-        "distance": 25.76861691004249,
-        "uv_label": "Vehicle8",
+        "distance": 25.94792882393259,
+        "uv_label": "Vehicle16",
         "rsu_label": "RSU3"
+    },
+    {
+        "distance": 8.773314667597608,
+        "uv_label": "Vehicle16",
+        "rsu_label": "RSU4"
+    },
+    {
+        "distance": 17.971169812503287,
+        "uv_label": "Vehicle1",
+        "rsu_label": "RSU1"
+    },
+    {
+        "distance": 45.40846104942303,
+        "uv_label": "Vehicle1",
+        "rsu_label": "RSU2"
+    },
+    {
+        "distance": 24.651659011953218,
+        "uv_label": "Vehicle1",
+        "rsu_label": "RSU3"
+    },
+    {
+        "distance": 6.943571750700337,
+        "uv_label": "Vehicle1",
+        "rsu_label": "RSU4"
+    },
+    {
+        "distance": 19.690055778205494,
+        "uv_label": "Vehicle15",
+        "rsu_label": "RSU1"
+    },
+    {
+        "distance": 46.172136245798,
+        "uv_label": "Vehicle15",
+        "rsu_label": "RSU2"
+    },
+    {
+        "distance": 25.956507156910885,
+        "uv_label": "Vehicle15",
+        "rsu_label": "RSU3"
+    },
+    {
+        "distance": 10.268673801887736,
+        "uv_label": "Vehicle15",
+        "rsu_label": "RSU4"
     }
 ]
